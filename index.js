@@ -3,9 +3,9 @@ const morgan = require('morgan')
 var norgan = require('morgan')
 const app = express()
 const cors = require('cors')
-
-app.use(express.json())
 app.use(express.static('build'))
+app.use(express.json())
+
 app.use(morgan('combined'))
 app.use(cors())
 
